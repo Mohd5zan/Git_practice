@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(237, 221, 202);
+}
+#logo img{
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+}
+#navele a{
+    margin: 2vw;
+    text-decoration: none;
+    outline: black;
+}
+#navele a:hover{
+   background-color: rgba(50, 50, 50, 0.307);
+   padding: 1vw;
+   border-radius: 10px;
+   color: white;
+}
