@@ -7,12 +7,17 @@ html,body{
     height: 100%;
     width: 100%;
 }
+#main{
+    height: 100%;
+    width: 100%;
+}
 #nav-bar{
+    height: 15%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: rgb(237, 221, 202);
+    background-color: rgb(251, 222, 188);
 }
 #logo img{
     height: 5vw;
@@ -29,4 +34,36 @@ html,body{
    padding: 1vw;
    border-radius: 10px;
    color: white;
+}
+#center{
+    height: calc(100% - 15%);
+    padding: 2vw;
+    background-color: brown;
+}
+#content{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    padding: 2vw;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#content::-webkit-scrollbar{
+    display: none;
+}
+.elem{
+    display: inline-block;
+    height: 30vw;
+    width: 30%;
+    background-color: blue;
+    border-radius: 10px;
+}
+.elem img{
+    border-radius: 10px;
+    border: 1px solid black;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
