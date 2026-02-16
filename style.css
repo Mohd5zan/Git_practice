@@ -28,6 +28,8 @@ html,body{
     margin: 2vw;
     text-decoration: none;
     outline: black;
+    font-weight: 600;
+    font-family: sans-serif;
 }
 #navele a:hover{
    background-color: rgba(50, 50, 50, 0.307);
@@ -46,17 +48,27 @@ html,body{
     background-color: white;
     padding: 2vw;
     white-space: nowrap;
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: hidden;
+    position: relative;
+    /* animation: scroll 15s linear infinite; */
 }
 #content::-webkit-scrollbar{
     display: none;
 }
+#slider {
+    width: fit-content;
+    white-space: nowrap;
+    display: flex;
+    gap: 2vw;
+    animation: scroll 15s linear infinite;
+    will-change: transform;
+}
 .elem{
+    flex-shrink: 0;
     display: inline-block;
     height: 30vw;
     width: 30%;
-    background-color: blue;
     border-radius: 10px;
 }
 .elem img{
@@ -66,4 +78,23 @@ html,body{
     height: 100%;
     width: 100%;
     overflow: hidden;
+}
+#btn{
+    position: absolute;
+    left: 50%;
+    top: 90%;
+}
+#btn button{
+    padding: 10px;
+    border-radius: 10px;
+    background:linear-gradient(to top,rgba(0, 0, 0, 0.315),white) ;
+}
+
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 2vw));
+    }
 }
